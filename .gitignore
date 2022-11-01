@@ -1,0 +1,7 @@
+# Project exclude paths
+/dummyClient/target/
+/Server1/target/
+/test1Client/target/
+/test1Server/target/
+/test2Client/target/
+/test2Server/target/

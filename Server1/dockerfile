@@ -1,0 +1,4 @@
+FROM openjdk:8
+COPY . /src/main/java/org/recipe/main/server
+WORKDIR /src/main/java/org/recipe/main/server
+ENTRYPOINT ["java","-jar","/src/main/java/org/recipe/main/server/grpc.jar"]

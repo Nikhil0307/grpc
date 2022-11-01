@@ -1,0 +1,27 @@
+syntax= "proto3";
+
+option java_multiple_files = true;
+
+package org.test.main;
+
+message Object {
+  int32 key = 1;
+  string val = 2;
+}
+message ObjReq{
+  Object object = 1;
+}
+message Response {
+  string res = 1;
+}
+
+message GetReq{
+  int32 key = 1;
+}
+
+service Testing{
+
+  rpc addObject(ObjReq) returns (Response);
+  rpc getObject(GetReq) returns (Response);
+
+}

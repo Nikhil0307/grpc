@@ -1,0 +1,36 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+
+package org.recipe.main;
+
+
+message Recipe{
+  string recipe = 1;
+  string process = 2;
+}
+
+message recipeRequest{
+  Recipe recipe = 1;
+}
+message Response {
+  string result = 1;
+}
+
+message recipeName{
+  string recipeName = 1;
+}
+
+message digit{
+  int32 dig =1;
+}
+service RecipeService {
+
+  rpc addRecipe(recipeRequest) returns (Response);
+
+  rpc getRecipe(recipeName) returns ( Response);
+
+  rpc addAndGetInt(digit) returns (Response);
+
+}
+
