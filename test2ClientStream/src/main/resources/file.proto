@@ -1,0 +1,27 @@
+syntax= "proto3";
+
+option java_multiple_files = true;
+
+package org.main.cleint;
+
+message PutCsv{
+  CSV csv = 1;
+  string name = 2;
+}
+message CSV{
+   bytes csv = 1;
+}
+message CsvName{
+  string name=1;
+}
+message Response{
+  string response = 1;
+}
+message ResponseBytes{
+   bytes bytes = 1;
+}
+service FileOperations{
+
+  rpc sendFile( stream PutCsv) returns (Response);
+  rpc getFile(CsvName) returns (ResponseBytes);
+}

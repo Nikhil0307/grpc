@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/test1Server/pom.xml" />
         <option value="$PROJECT_DIR$/test2Client/pom.xml" />
         <option value="$PROJECT_DIR$/test2Server/pom.xml" />
+        <option value="$PROJECT_DIR$/test2ClientStream/pom.xml" />
       </list>
     </option>
   </component>

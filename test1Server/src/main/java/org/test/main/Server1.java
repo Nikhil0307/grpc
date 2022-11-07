@@ -14,7 +14,7 @@ public class Server1 extends TestingGrpc.TestingImplBase{
 
     @Override
     public void getObject(GetReq request, StreamObserver<Response> responseObserver) {
-        String ans = Cache.cache.get(request.getKey());
+        String ans = String.valueOf(Cache.cache.get(request.getKey()));
         Response response = Response.newBuilder().setRes(ans).build();
         responseObserver.onNext(response);
         responseObserver.onCompleted();
